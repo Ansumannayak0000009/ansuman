@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fire Neon Resume</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron', sans-serif;
+}
+
+body{
+    background:black;
+    color:#00ff88;
+    overflow-x:hidden;
+}
+
+/* Background */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.3), transparent),
+        radial-gradient(circle at 80% 20%, rgba(215, 208, 213, 0.2), transparent);
+    animation:move 8s infinite alternate;
+    z-index:-1;
+}
+
+@keyframes move{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(-5%, -5%);}
+}
+
+/* Cursor */
+.cursor{
+    position:fixed;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#00ff88;
+    box-shadow:0 0 15px #00ff88, 0 0 30px #ff3c00;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    z-index:999;
+}
+
+/* Container */
+.container{
+    width:85%;
+    margin:auto;
+    padding:50px 0;
+}
+
+/* Card */
+.card{
+    background:rgba(0,0,0,0.6);
+    border:1px solid rgba(0,255,120,0.3);
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:30px;
+    box-shadow:0 0 20px rgba(0,255,120,0.2);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 40px #00ff88, 0 0 60px #ff3c00;
+}
+
+/* Header */
+header{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+/* Photo */
+.profile{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    overflow:hidden;
+    border:3px solid #00ff88;
+    box-shadow:0 0 25px #00ff88, 0 0 40px #ff3c00;
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Name */
+h1{
+    font-size:34px;
+    color:#ff3c00;
+    text-shadow:0 0 10px #ff3c00;
+}
+
+.subtitle{
+    color:#00ff88;
+    opacity:0.8;
+}
+
+/* Skills */
+.bar{
+    height:6px;
+    background:rgba(255,255,255,0.1);
+    border-radius:5px;
+    margin-top:5px;
+}
+
+.progress{
+    height:6px;
+    background:linear-gradient(90deg,#ff3c00,#00ff88);
+    width:0;
+    border-radius:5px;
+    transition:2s;
+}
+
+/* Animation */
+.fade{
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="card fade">
+<header>
+
+<div class="profile">
+<img src="photo.jpeg">
+</div>
+
+<div>
+<h1>Your Name</h1>
+<div class="subtitle">Developer • AI • Creator</div>
+</div>
+
+</header>
+</div>
+
+<!-- ABOUT -->
+<div class="card fade">
+<h2>About</h2>
+<p>I build high-performance futuristic systems with powerful UI and animations.
+    I design and develop futuristic digital experiences combining powerful functionality with premium UI.
+My focus is on performance, innovation, and creating systems that stand out.
+</p>
+</div>
+
+<!-- SKILLS -->
+<div class="card fade">
+<h2>Skills</h2>
+
+<p>HTML</p>
+<div class="bar"><div class="progress" data-width="90%"></div></div>
+
+<p>CSS</p>
+<div class="bar"><div class="progress" data-width="85%"></div></div>
+
+<p>JavaScript</p>
+<div class="bar"><div class="progress" data-width="80%"></div></div>
+
+</div>
+
+<!-- 🎓 EDUCATION -->
+<div class="card fade">
+<h2>🎓 Education</h2>
+
+<p style="color:#ff3c00;"><strong>School</strong></p>
+<p>School Name: SSVM</p>
+<p style="opacity:0.7;">Class 10 & 12 • Year •78 % & 76%</p>
+
+<br>
+
+<p style="color:#ff3c00;"><strong>College</strong></p>
+<p> College Name: SOA, ITER</p>
+<p style="opacity:0.7;">Degree:B-TECH • Branch :Data Science• Year:2024</p>
+
+</div>
+
+<!-- 💼 EXPERIENCE -->
+<div class="card fade">
+<h2>💼 Experience:2+ year</h2>
+
+<p style="color:#ff3c00;"><strong>Internship</strong></p>
+<p>Company Name</p>
+<p style="opacity:0.7;">Duration</p>
+
+<ul style="margin-left:15px;">
+<li>Built responsive UI</li>
+<li>Worked on real-world projects</li>
+</ul>
+
+<br>
+
+<p style="color:#ff3c00;"><strong>Projects</strong></p>
+<ul style="margin-left:15px;">
+<li>Omnitrix System UI</li>
+<li>Machine Learning Models</li>
+</ul>
+
+</div>
+
+<!-- PROJECTS -->
+<div class="card fade">
+<h2>Projects</h2>
+<p>🔥 Omnitrix System UI</p>
+<p>⚡ ML Models</p>
+</div>
+
+<!-- CONTACT -->
+<div class="card fade">
+<h2>Contact</h2>
+<p>Email: your@email.com</p>
+</div>
+
+</div>
+
+<script>
+// Cursor
+const cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", e=>{
+    cursor.style.left = e.clientX+"px";
+    cursor.style.top = e.clientY+"px";
+});
+
+// Show animation
+const items = document.querySelectorAll(".fade");
+
+function showItems(){
+    items.forEach(el=>{
+        if(el.getBoundingClientRect().top < window.innerHeight-100){
+            el.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", showItems);
+window.addEventListener("load", showItems);
+
+// Skills animation
+window.addEventListener("load", ()=>{
+    document.querySelectorAll(".progress").forEach(bar=>{
+        bar.style.width = bar.dataset.width;
+    });
+});
+</script>
+
+</body>
+</html>
